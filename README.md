@@ -1,4 +1,4 @@
-# tdd-katas-in-python
+# tdd-katas
 
 - https://www.tddbuddy.com/katas.html
 - https://projecteuler.net/archives
