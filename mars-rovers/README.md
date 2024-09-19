@@ -46,3 +46,11 @@ Expected Output:
 
 
 Source: https://code.google.com/archive/p/marsrovertechchallenge/
+
+
+## Start up
+
+```
+poetry run pytest
+poetry run python python_mars_rovers/gui.py
+```

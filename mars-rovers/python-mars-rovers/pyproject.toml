@@ -9,6 +9,7 @@ packages = [{include = "python_mars_rovers"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 pytest = "^8.3.3"
+nicegui = "^2.1.0"
 
 
 [build-system]
