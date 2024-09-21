@@ -5,3 +5,8 @@ def test_plateau_getWidth():
 
 def test_plateau_getHeight():
 	assert Plateau(5, 3).getHeight() == 3
+
+def test_compute_grid():
+	array = [['', '', ''], ['', '', ''], ['', '', ''], ['', '', ''], ['', '', '']]
+
+	assert Plateau(5, 3).computeGrid() == array
