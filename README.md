@@ -2,6 +2,7 @@
 
 ## Current Projects 
 - Mars Rovers
+- Calculator
 
 ## Ideass
 - https://www.tddbuddy.com/katas.html
