@@ -1,5 +1,5 @@
 {
-  "name": "fraction-lib",
+  "name": "@rlratcliffe/fraction-lib",
   "version": "1.0.0",
   "description": "A library for calculating fractions.",
   "main": "src/fraction.js",
@@ -12,5 +12,10 @@
   "devDependencies": {
     "chai": "^5.1.1",
     "mocha": "^10.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlratcliffe/tdd-katas.git",
+    "directory": "calculator/fraction-lib"
   }
 }
