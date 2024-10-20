@@ -27,6 +27,11 @@ describe('No simplification', function() {
         expect(new Fraction(1,3).plus(new Fraction(1,3)).equals(new Fraction(2,3))).to.be.true;
         done();
     });
+
+    it('0 as numerator', function(done) {
+        expect(new Fraction(0,2).plus(new Fraction(1,2)).equals(new Fraction(1,2))).to.be.true;
+        done();
+    });
 });
 
 
