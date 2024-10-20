@@ -11,7 +11,6 @@
 - different denominator, multiply both sides 1/3 + 1/5
 - different denominator no simplify 
 - ~~zero numerator~~
-- zero denominator
 - whole number + fraction
 - negative first fraction
 - both fractions negative
