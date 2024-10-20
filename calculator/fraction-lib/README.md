@@ -10,7 +10,7 @@
 - different denominator, multiply only one side, simplify: 1/3 + 1/6 = 1/2
 - different denominator, multiply both sides 1/3 + 1/5
 - different denominator no simplify 
-- zero numerator
+- ~~zero numerator~~
 - zero denominator
 - whole number + fraction
 - negative first fraction
@@ -19,7 +19,7 @@
 - whole number 1/2 + 1/2 = 1
 
 
-- parse string fraction
+- parse string fraction?
 - fractions equal each other 1/2 = 4/8 = 89/178 = 56/112
 
 ## How to Use this Package

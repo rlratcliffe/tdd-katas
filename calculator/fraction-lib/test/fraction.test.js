@@ -10,24 +10,36 @@ describe('Get numerator', function() {
     });
 });
 
-// Can't override equals in JS so this will always fail
-xdescribe('Same fractions are equal', function() {
-    it('1/3 = 1/3', function(done) {
+describe('Fractions are equal', function() {
+    xit('Can\'t override equals in JS so this will always fail', function(done) {
         expect(new Fraction(1,3) ==  new Fraction(1,3)).to.be.true;
         done();
     });
-});
 
-describe('Same fractions are equal, custom equals', function() {
-    it('1/3 = 1/3', function(done) {
+    it('Custom equals', function(done) {
         expect(new Fraction(1,3).equals(new Fraction(1,3))).to.be.true;
         done();
     });
 });
 
-describe('Same denominator, no simplification', function() {
-    it('1/3 + 1/3 = 2/3', function(done) {
-        expect(new Fraction(1,3).plus(new Fraction(1,3)).equals(new Fraction(2,3)))
+describe('No simplification', function() {
+    it('Same denominator', function(done) {
+        expect(new Fraction(1,3).plus(new Fraction(1,3)).equals(new Fraction(2,3))).to.be.true;
+        done();
+    });
+
+    it('0 as numerator', function(done) {
+        expect(new Fraction(0,2).plus(new Fraction(1,2)).equals(new Fraction(1,2))).to.be.true;
+        done();
+    });
+});
+
+
+
+
+describe('Print fraction', function() {
+    it('1/3', function(done) {
+        expect(new Fraction(1,3).toString()).equals("1/3")
         done();
     });
 });

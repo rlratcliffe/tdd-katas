@@ -17,4 +17,8 @@ export default class Fraction {
         return this.numerator === otherFraction.numerator &&
                this.denominator === otherFraction.denominator;
     }
+
+	toString() {
+		return this.numerator.toString() + "/" + this.denominator.toString()
+	}
 }
