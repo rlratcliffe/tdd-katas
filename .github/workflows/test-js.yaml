@@ -30,6 +30,7 @@ jobs:
         working-directory: ./calculator/calculator-front-end
         run: |
           ls
+          npm install
           npx expo export --platform web
 
       - name: Deploy with rsync
