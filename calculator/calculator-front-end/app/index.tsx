@@ -14,7 +14,7 @@ let fraction = new Fraction(1,2);
         alignItems: "center",
       }}
     >
-      <Text>Updated: 10/25 9:36</Text>
+      <Text>Updated: 10/25 9:58</Text>
       <Text>Numerator: {fraction.getNumerator()}</Text>
     </View>
   );
