@@ -27,6 +27,8 @@ jobs:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build app
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         working-directory: ./calculator/calculator-front-end
         run: |
           ls
