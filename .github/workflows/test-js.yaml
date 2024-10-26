@@ -25,3 +25,16 @@ jobs:
       # - run: npm publish
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: npx expo export --platform web
+
+      - name: Deploy with rsync
+        env:
+            SSH_USER: ${{ secrets.SSH_USER }}
+            SSH_KEY: ${{ secrets.SSH_KEY }}
+            SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          echo "$SSH_KEY" > ~/.ssh/deploy.key
+          chmod 600 ~/.ssh/deploy.key
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          rsync -avz ./dist/ $SSH_USER@$SSH_HOST:/var/www/html
