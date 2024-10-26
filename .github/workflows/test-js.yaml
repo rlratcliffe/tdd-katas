@@ -26,9 +26,14 @@ jobs:
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npx expo export --platform web
+      - name: Build app
+        working-directory: ./calculator/calculator-front-end
+        run: |
+          ls
+          npx expo export --platform web
 
       - name: Deploy with rsync
+        working-directory: ./calculator/calculator-front-end
         env:
             SSH_USER: ${{ secrets.SSH_USER }}
             SSH_KEY: ${{ secrets.SSH_KEY }}
