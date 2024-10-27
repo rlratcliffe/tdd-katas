@@ -1,14 +1,15 @@
-on:
-  push:
-    branches:
-      - '**' 
+name: Deploy UI
+
+on: workflow_dispatch
 
 jobs:
-  test:
+  js-ui-deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: js-test
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./calculator/fraction-lib
+        working-directory: ./calculator/calculator-front-end
     steps:
       - uses: actions/checkout@v2
 
@@ -18,18 +19,10 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@rlratcliffe'
 
-      - run: make build
-
-      - run: make test
-
-      # - run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Build app
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        working-directory: ./calculator/calculator-front-end
+
         run: |
           npm install
           npx expo export --platform web
