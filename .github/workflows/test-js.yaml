@@ -4,7 +4,7 @@ on:
       - '**' 
 
 jobs:
-  ci:
+  test:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -25,3 +25,26 @@ jobs:
       # - run: npm publish
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build app
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: ./calculator/calculator-front-end
+        run: |
+          npm install
+          npx expo export --platform web
+
+      - name: Deploy with rsync
+        working-directory: ./calculator/calculator-front-end
+        env:
+            SSH_USER: ${{ secrets.SSH_USER }}
+            SSH_KEY: ${{ secrets.SSH_KEY }}
+            SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
+          echo "$SSH_KEY" > ~/.ssh/deploy.key
+          chmod 600 ~/.ssh/deploy.key
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/deploy.key
+          ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+          rsync -avz ./dist/ $SSH_USER@$SSH_HOST:/var/www/katas_rlratcliffedev/calculator
