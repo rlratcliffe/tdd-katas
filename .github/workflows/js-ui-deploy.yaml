@@ -1,4 +1,4 @@
-name: Deploy UI
+name: deploy js ui
 
 on: workflow_dispatch
 

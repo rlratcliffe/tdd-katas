@@ -1,3 +1,5 @@
+name: js test
+
 on:
   push:
     branches:
