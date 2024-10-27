@@ -47,4 +47,4 @@ jobs:
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/deploy.key
           ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
-          rsync -avz ./dist/ $SSH_USER@$SSH_HOST:/var/www/html
+          rsync -avz ./dist/ $SSH_USER@$SSH_HOST:/var/www/katas_rlratcliffedev/calculator
