@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - '**' 
+
+jobs:
+  js-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./calculator/fraction-lib
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@rlratcliffe'
+
+      - run: make build
+
+      - run: make test
+
+      # - run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
