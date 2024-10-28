@@ -17,7 +17,7 @@
 - both fractions negative
 - negative second fraction
 - whole number 1/2 + 1/2 = 1
-
+- ~~convert or throw error if strings are passed as input~~
 
 - parse string fraction?
 - fractions equal each other 1/2 = 4/8 = 89/178 = 56/112

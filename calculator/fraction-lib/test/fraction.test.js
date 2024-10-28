@@ -35,6 +35,13 @@ describe('No simplification', function() {
     });
 });
 
+describe('Numbers as strings are handled', function() {
+    it('Both numerator and denominator as strings', function(done) {
+        expect(new Fraction("1","3").plus(new Fraction("1","3")).equals(new Fraction(2,3))).to.be.true;
+        done();
+    });
+});
+
 
 
 

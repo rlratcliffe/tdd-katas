@@ -166,7 +166,7 @@ cython_debug/
 # JAVASCRIPT/NODE
 
 node_modules
-fraction-lib*.tgz
+*fraction-lib*.tgz
 
 # EXPO
 
