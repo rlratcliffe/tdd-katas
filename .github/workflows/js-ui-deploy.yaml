@@ -26,12 +26,18 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@rlratcliffe'
 
-      - name: Build app
+      - name: Install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
         run: |
-          npm install
+          npm install --quiet
+
+      - name: Test
+        run: |
+          npm test
+
+      - name: Build
+        run: |
           npx expo export --platform web
 
       - name: Deploy with rsync
