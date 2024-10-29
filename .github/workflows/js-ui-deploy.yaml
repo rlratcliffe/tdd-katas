@@ -3,16 +3,7 @@ name: deploy js ui
 on: workflow_dispatch
 
 jobs:
-  default:
-    if: github.ref != 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Not on main, not deploying"
-
   js-ui-deploy:
-    if: github.ref == 'refs/heads/main'
-    # this needs to run before ui tests, not lib tests
-    # needs: js-test
     runs-on: ubuntu-latest
     defaults:
       run:
