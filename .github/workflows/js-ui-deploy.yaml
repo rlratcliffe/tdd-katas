@@ -45,16 +45,7 @@ jobs:
           ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
           rsync -avz ./dist/ $SSH_USER@$SSH_HOST:/var/www/katas_rlratcliffedev/calculator
 
-
-      - name: Verify
-        env:
-            SSH_USER: ${{ secrets.SSH_USER }}
-            SSH_KEY: ${{ secrets.SSH_KEY }}
-            SSH_HOST: ${{ secrets.SSH_HOST }}
-        run: |
-          ls
+          echo "Verifying copied files"
           LOCAL_HASH=$(find dist/ -type f -exec md5sum {} + | sort | md5sum | awk '{ print $1 }')
           REMOTE_HASH=$(ssh $SSH_USER@$SSH_HOST 'find /var/www/katas_rlratcliffedev/calculator/ -type f -exec md5sum {} + | sort | md5sum' | awk '{ print $1 }')
           if [ ! -z "$LOCAL_HASH" ] && [ "$LOCAL_HASH" = "$REMOTE_HASH" ]; then echo "Same"; else echo "Diff"; false; fi
-
-          
