@@ -25,6 +25,21 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Build with Docker
+
+```
+docker build -t calculator .
+docker run --name calc -p 3000:3000 calculator:latest
+```
+
+### Improvements:
+- Allow token as env variable
+- Better organize npmrc, app.config.js, and Dockerfile in separate deploy folder
+- Publish images to github, maybe tag with git hash
+- Use image in server instead of pm2 and files
+- Change routing
+- Display a list of versions
+
 ## Get a fresh project
 
 When you're ready, run:
