@@ -9,7 +9,15 @@ export default class Fraction {
 	}
 
     plus(otherFraction) {
-		this.numerator += otherFraction.numerator;
+		if (this.denominator != otherFraction.denominator) {
+			let newFirstFractionNumerator = this.numerator * otherFraction.denominator;
+			let newSecondFractionNumerator = otherFraction.numerator * this.denominator;
+			this.numerator = newFirstFractionNumerator +newSecondFractionNumerator;
+			this.denominator *= otherFraction.denominator;
+		}
+		else {
+			this.numerator += otherFraction.numerator;
+		}
 
 		let gcd = this.#gcd(this.numerator, this.denominator);
 		if (gcd > 1) {

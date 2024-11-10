@@ -28,6 +28,11 @@ describe('No simplification', function() {
         done();
     });
 
+    it('Different denominator', function(done) {
+        expect(new Fraction(1,3).plus(new Fraction(2,5)).equals(new Fraction(11,15))).to.be.true;
+        done();
+    });
+
     // This doesn't change current logic, so unsure if it should be here
     it('0 as numerator', function(done) {
         expect(new Fraction(0,2).plus(new Fraction(1,2)).equals(new Fraction(1,2))).to.be.true;

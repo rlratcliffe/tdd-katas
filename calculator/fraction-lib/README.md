@@ -9,7 +9,7 @@
 - ~~same denominator no simplification: 1/3 + 1/3 = 2/3 (simplest?)~~
 - different denominator, multiply only one side, simplify: 1/3 + 1/6 = 1/2
 - different denominator, multiply both sides 1/3 + 1/5
-- different denominator no simplify 
+- ~~different denominator no simplify ~~
 - ~~zero numerator~~
 - ~~zero denominator~~ (not actually valid math so not doing)
 - whole number + fraction
