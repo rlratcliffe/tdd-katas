@@ -10,8 +10,23 @@ export default class Fraction {
 
     plus(otherFraction) {
 		this.numerator += otherFraction.numerator;
+
+		let gcd = this.#gcd(this.numerator, this.denominator);
+		if (gcd > 1) {
+			this.numerator = this.numerator / gcd;
+			this.denominator = this.denominator / gcd;
+		}
         return this;
     }
+
+	#gcd(numerator, denominator) {
+		while (denominator !== 0) {
+		  let temp = denominator;
+		  denominator = numerator % denominator;
+		  numerator = temp;
+		}
+		return numerator;
+	}
 
     equals(otherFraction) {
         return this.numerator === otherFraction.numerator &&
