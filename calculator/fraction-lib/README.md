@@ -7,8 +7,8 @@
 ## Test List 
 - ~~same denominator and simplification: 1/8 + 3/8 = 1/2~~
 - ~~same denominator no simplification: 1/3 + 1/3 = 2/3 (simplest?)~~
-- different denominator, multiply only one side, simplify: 1/3 + 1/6 = 1/2
-- different denominator, multiply both sides 1/3 + 1/5
+- ~~different denominator, multiply only one side (simplification): 1/3 + 1/6 = 1/2~~ (added, but already covered)
+- ~~different denominator, multiply both sides 1/3 + 1/5~~ (not added, already covered)
 - ~~different denominator no simplify ~~
 - ~~zero numerator~~
 - ~~zero denominator~~ (not actually valid math so not doing)

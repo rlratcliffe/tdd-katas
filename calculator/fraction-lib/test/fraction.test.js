@@ -45,6 +45,11 @@ describe('Simplification', function() {
         expect(new Fraction(1,8).plus(new Fraction(3,8)).equals(new Fraction(1,2))).to.be.true;
         done();
     });
+
+    it('Different denominator, multiply only one side', function(done) {
+        expect(new Fraction(1,3).plus(new Fraction(1,6)).equals(new Fraction(1,2))).to.be.true;
+        done();
+    });
 });
 
 describe('Numbers as strings are handled', function() {
