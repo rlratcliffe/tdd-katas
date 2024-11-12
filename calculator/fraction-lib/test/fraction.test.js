@@ -33,7 +33,6 @@ describe('No simplification', function() {
         done();
     });
 
-    // This doesn't change current logic, so unsure if it should be here
     it('0 as numerator', function(done) {
         expect(new Fraction(0,2).plus(new Fraction(1,2)).equals(new Fraction(1,2))).to.be.true;
         done();
@@ -48,6 +47,11 @@ describe('Simplification', function() {
 
     it('Different denominator, multiply only one side', function(done) {
         expect(new Fraction(1,3).plus(new Fraction(1,6)).equals(new Fraction(1,2))).to.be.true;
+        done();
+    });
+
+    it('Two fractions equal whole number', function(done) {
+        expect(new Fraction(1,2).plus(new Fraction(1,2)).equals(new Fraction(1,1))).to.be.true;
         done();
     });
 });
