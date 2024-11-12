@@ -16,10 +16,27 @@ describe('Fractions are equal', function() {
         done();
     });
 
-    it('Custom equals', function(done) {
+    it('Custom equals, same fraction', function(done) {
         expect(new Fraction(1,3).equals(new Fraction(1,3))).to.be.true;
         done();
     });
+ 
+    // These affect the logic itself and the tests and I'm unsure if they should be enabled
+    xit('Custom equals, simplified first example', function(done) {
+        expect(new Fraction(1,2).equals(new Fraction(4,8))).to.be.true;
+        done();
+    });
+
+    xit('Custom equals, simplified second example', function(done) {
+        expect(new Fraction(1,2).equals(new Fraction(89,178))).to.be.true;
+        done();
+    });
+    
+    xit('Custom equals, simplified third example', function(done) {
+        expect(new Fraction(1,2).equals(new Fraction(56,112))).to.be.true;
+        done();
+    });
+
 });
 
 describe('No simplification', function() {

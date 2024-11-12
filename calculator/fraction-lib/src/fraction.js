@@ -18,14 +18,30 @@ export default class Fraction {
 		else {
 			this.numerator += otherFraction.numerator;
 		}
+		
+		let [numerator, denominator] = this.#simplify(this.numerator, this.denominator);
+		this.numerator = numerator;
+		this.denominator = denominator;
 
-		let gcd = this.#gcd(this.numerator, this.denominator);
-		if (gcd > 1) {
-			this.numerator = this.numerator / gcd;
-			this.denominator = this.denominator / gcd;
-		}
         return this;
     }
+
+    equals(otherFraction) {
+		// if simplifying inside equals
+		// let [simplifiedFractionNumerator, simplifiedFractionDenominator] = this.#simplify(this.numerator, this.denominator);
+		// let [otherFractionNumerator, otherFractionDenominator] = this.#simplify(otherFraction.numerator, otherFraction.denominator);
+		
+        // return simplifiedFractionNumerator === otherFractionNumerator &&
+		// 		simplifiedFractionDenominator === otherFractionDenominator;
+
+
+		return this.numerator === otherFraction.numerator &&
+		this.denominator === otherFraction.denominator;
+    }
+
+	toString() {
+		return this.numerator.toString() + "/" + this.denominator.toString()
+	}
 
 	#gcd(numerator, denominator) {
 		while (denominator !== 0) {
@@ -36,12 +52,12 @@ export default class Fraction {
 		return numerator;
 	}
 
-    equals(otherFraction) {
-        return this.numerator === otherFraction.numerator &&
-               this.denominator === otherFraction.denominator;
-    }
-
-	toString() {
-		return this.numerator.toString() + "/" + this.denominator.toString()
+	#simplify(numerator, denominator) {
+		let gcd = this.#gcd(numerator, denominator);
+		if (gcd > 1) {
+			numerator = numerator / gcd;
+			denominator = denominator / gcd;
+		}
+		return [numerator, denominator];
 	}
 }

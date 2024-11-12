@@ -24,6 +24,7 @@
 
 ## Questions
 - Need to have different class to represent whole numbers? Convert fractions to whole numbers? 1/1 -> 1?
+- If I've implemented a custom equals and the custom equals that also simplifies. Using the same simplify in the equals and in plus, will incorrectly show a fraction as being simplified when it hasn't.
 
 ## How to Use this Package
 
