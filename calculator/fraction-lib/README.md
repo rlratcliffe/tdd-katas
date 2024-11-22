@@ -10,6 +10,7 @@
 - ~~different denominator, multiply only one side (simplification): 1/3 + 1/6 = 1/2~~ (added, but already covered)
 - ~~different denominator, multiply both sides 1/3 + 1/5~~ (not added, already covered)
 - ~~different denominator no simplify ~~
+- different denominator, not an easy common denominator?
 - ~~zero numerator~~
 - ~~zero denominator~~ (not actually valid math so not doing)
 - whole number + fraction
@@ -25,6 +26,7 @@
 ## Questions
 - Need to have different class to represent whole numbers? Convert fractions to whole numbers? 1/1 -> 1?
 - If I've implemented a custom equals and the custom equals that also simplifies. Using the same simplify in the equals and in plus, will incorrectly show a fraction as being simplified when it hasn't.
+- Related to the above, moving the equals class helps with this a bit, but is there a way to document that certain tests should be more prioritized because fixing those tests might fix issues in aother test? Or is that the wrong problem.
 
 ## How to Use this Package
 
