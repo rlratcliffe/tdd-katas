@@ -4,8 +4,17 @@ export default class Fraction {
 		this.denominator = Number(denominator);
 	}
 
+	// need to allow initializing a fraction with no denominator, but multiple constructors not allowed in JSs
+	static noDenominator(numerator) {
+		return new Fraction(numerator, 1);
+	}
+
 	getNumerator() {
 		return this.numerator;
+	}
+
+	getDenominator() {
+		return this.denominator;
 	}
 
     plus(otherFraction) {

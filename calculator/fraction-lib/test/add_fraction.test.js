@@ -10,6 +10,16 @@ describe('Add fractions', function() {
         });
     });
 
+    describe('Simplest fraction form, as integer', function() {
+        it('Add non zero and zero', function(done) {
+            let fraction = Fraction.noDenominator(0);
+            let other = Fraction.noDenominator(1);
+            expect(fraction.plus(other).getNumerator()).to.equal(1);
+            expect(fraction.plus(other).getDenominator()).to.equal(1);
+            done();
+        });
+    });
+
     describe('No simplification', function() {
         it('Same denominator', function(done) {
             expect(new Fraction(1,3).plus(new Fraction(1,3)).equals(new Fraction(2,3))).to.be.true;
