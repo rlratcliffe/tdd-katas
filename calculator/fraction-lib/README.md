@@ -14,10 +14,12 @@
 - ~~zero numerator~~
 - ~~zero denominator~~ (not actually valid math so not doing)
 - whole number + fraction
-- negative first fraction
+- negative first fraction $-\frac{2}{5} + \frac{1}{5} = \frac{3}{5}$
 - both fractions negative
 - negative second fraction
-- ~~whole number 1/2 + 1/2 = 1~~
+- numerator negative
+- denominator negative
+- both numerator and denominator negative, which would make the fraction positive?
 - ~~convert or throw error if strings are passed as input~~
 
 - parse string fraction?
@@ -27,6 +29,8 @@
 - Need to have different class to represent whole numbers? Convert fractions to whole numbers? 1/1 -> 1?
 - If I've implemented a custom equals and the custom equals that also simplifies. Using the same simplify in the equals and in plus, will incorrectly show a fraction as being simplified when it hasn't.
 - Related to the above, moving the equals class helps with this a bit, but is there a way to document that certain tests should be more prioritized because fixing those tests might fix issues in aother test? Or is that the wrong problem.
+- Should I be writing my test lists by hand instead?
+- Are there mental "tests" to ensure I'm doing things correctly?
 
 ## How to Use this Package
 
