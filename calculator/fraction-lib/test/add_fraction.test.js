@@ -55,6 +55,7 @@ describe('Add fractions', function() {
     });
 
     describe('Negative fractions', function() {
+        // Fractions can only have negative in numerator, is converted in the constructor
         it('Negative numerator first fraction', function(done) {
             expect(new Fraction(-1,4).plus(new Fraction(2,4)).equals(new Fraction(1,4))).to.be.true;
             done();
@@ -62,6 +63,11 @@ describe('Add fractions', function() {
 
         it('Negative numerator second fraction', function(done) {
             expect(new Fraction(1,4).plus(new Fraction(-2,4)).equals(new Fraction(-1,4))).to.be.true;
+            done();
+        });
+
+        it('Both numerators are negative', function(done) {
+            expect(new Fraction(-1,4).plus(new Fraction(-2,4)).equals(new Fraction(-3,4))).to.be.true;
             done();
         });
     });
