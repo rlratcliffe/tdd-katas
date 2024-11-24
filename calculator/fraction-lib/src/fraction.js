@@ -2,6 +2,7 @@ export default class Fraction {
 	constructor(numerator, denominator) {
 		this.numerator = Number(numerator);
 		this.denominator = Number(denominator);
+		[this.numerator, this.denominator] = this.#normalizeNegativeDenominator(this.numerator, this.denominator);
 	}
 
 	// need to allow initializing a fraction with no denominator, but multiple constructors not allowed in JSs
@@ -47,6 +48,14 @@ export default class Fraction {
 		return this.numerator === otherFraction.numerator &&
 		this.denominator === otherFraction.denominator;
     }
+
+	#normalizeNegativeDenominator(numerator, denominator) {
+		if (denominator < 0) {
+			denominator = Math.abs(denominator);
+			numerator = numerator * -1;
+		}
+		return [numerator, denominator];
+	}
 
 	toString() {
 		return this.numerator.toString() + "/" + this.denominator.toString()
