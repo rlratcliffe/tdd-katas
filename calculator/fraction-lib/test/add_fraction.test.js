@@ -52,6 +52,16 @@ describe('Add fractions', function() {
             expect(new Fraction(1,2).plus(new Fraction(1,2)).equals(new Fraction(1,1))).to.be.true;
             done();
         });
+
+        it('Two fractions equal whole number with no denominator', function(done) {
+            expect(new Fraction(3,4).plus(new Fraction(1,4)).equals(Fraction.noDenominator(1))).to.be.true;
+            done();
+        });
+
+        it('Whole number and fraction', function(done) {
+            expect(Fraction.noDenominator(5).plus(new Fraction(1,2)).equals(new Fraction(11,2))).to.be.true;
+            done();
+        });
     });
 
     describe('Negative fractions', function() {

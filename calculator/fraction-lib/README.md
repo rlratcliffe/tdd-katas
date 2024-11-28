@@ -13,7 +13,7 @@
 - different denominator, not an easy common denominator?
 - ~~zero numerator~~
 - ~~zero denominator~~ (not actually valid math so not doing)
-- whole number + fraction
+- ~~whole number + fraction~~
 - ~~negative first fraction $-\frac{2}{5} + \frac{1}{5} = \frac{3}{5}$~~
 - ~~both fractions negative~~
 - ~~negative second fraction~~
@@ -23,7 +23,7 @@
 - ~~convert or throw error if strings are passed as input~~
 
 - parse string fraction?
-- fractions equal each other 1/2 = 4/8 = 89/178 = 56/112
+- ~~fractions equal each other 1/2 = 4/8 = 89/178 = 56/112~~
 
 ## Questions
 - Need to have different class to represent whole numbers? Convert fractions to whole numbers? 1/1 -> 1?
