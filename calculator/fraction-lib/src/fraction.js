@@ -5,7 +5,7 @@ export default class Fraction {
 		[this.numerator, this.denominator] = this.#normalizeNegativeDenominator(this.numerator, this.denominator);
 	}
 
-	// need to allow initializing a fraction with no denominator, but multiple constructors not allowed in JSs
+	// need to allow initializing a fraction with no denominator, but multiple constructors not allowed in JS
 	static noDenominator(numerator) {
 		return new Fraction(numerator, 1);
 	}
