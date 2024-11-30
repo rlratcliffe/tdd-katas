@@ -1,7 +1,7 @@
 {
-  "name": "@rlratcliffe/fraction-lib",
+  "name": "@rlratcliffe/math-lib",
   "version": "1.0.0",
-  "description": "A library for calculating fractions.",
+  "description": "A library for calculating math.",
   "main": "src/fraction.js",
   "type": "module",
   "scripts": {
