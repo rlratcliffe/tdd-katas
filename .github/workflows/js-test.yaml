@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./calculator/fraction-lib
+        working-directory: ./calculator/math-lib
     steps:
       - uses: actions/checkout@v2
 
