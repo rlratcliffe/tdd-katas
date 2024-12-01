@@ -7,7 +7,7 @@ export default class Fraction {
 		if (!(other instanceof Fraction)) {
 			throw new TypeError("Can only add Fractions of type Fraction")
 		}
-		return this;
+		return new Fraction(this.integer + other.integer);
 	}
 
 	intValue() {
