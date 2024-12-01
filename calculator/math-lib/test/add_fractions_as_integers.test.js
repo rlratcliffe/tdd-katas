@@ -32,6 +32,24 @@ describe('Adding fractions', function() {
         done();
     });
 
+    it('Positive plus negative equals positive', function(done) {
+        let sum = new Fraction(5).plus(new Fraction(-3));
+        expect(sum.intValue()).to.equal(2);
+        done();
+    });
+
+    it('Negative plus negative equals negative', function(done) {
+        let sum = new Fraction(-12).plus(new Fraction(-4));
+        expect(sum.intValue()).to.equal(-16)
+        done();
+    });
+
+    it('Negative plus postive outputs zero', function(done) {
+        let sum = new Fraction(-7).plus(new Fraction(7));
+        expect(sum.intValue()).to.equal(0);
+        done();
+    });
+
     // it('', function(done) {
 
     //     done();
