@@ -26,6 +26,12 @@ describe('Adding fractions', function() {
         done();
     });
 
+    it('Negative plus positive outputs negative', function(done) {
+        let sum = new Fraction(-7).plus(new Fraction(2));
+        expect(sum.intValue()).to.equal(-5);
+        done();
+    });
+
     // it('', function(done) {
 
     //     done();
