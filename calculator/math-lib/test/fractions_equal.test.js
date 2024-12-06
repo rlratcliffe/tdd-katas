@@ -36,8 +36,13 @@ describe('Fractions are equal', function() {
         done();
     });
 
-    it("Different denominators", function(done) {
+    it("Different denominators but same numerators", function(done) {
         expect(new Fraction(1,3).equals(new Fraction(1,4))).to.be.false;
+        done();
+    });
+
+    it("Different numerators but same denominators", function(done) {
+        expect(new Fraction(2,3).equals(new Fraction(1,3))).to.be.false;
         done();
     });
 });
