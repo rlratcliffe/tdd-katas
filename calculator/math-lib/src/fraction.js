@@ -24,6 +24,7 @@ export default class Fraction {
 	}
 }
 
-Fraction.prototype.equals = function(obj) {
-	return false
+Fraction.prototype.equals = function(other) {
+	let otherIsFraction = other instanceof Fraction;
+	return otherIsFraction;
 }
