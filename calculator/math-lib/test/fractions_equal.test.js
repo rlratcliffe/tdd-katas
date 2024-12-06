@@ -55,4 +55,9 @@ describe('Fractions are equal', function() {
         expect(new Fraction(1).equals(new Fraction(2))).to.be.false;
         done();
     });
+
+    it("Compare fraction and int", function(done) {
+        expect(new Fraction(1).equals(1)).to.be.false;
+        done();
+    });
 });
