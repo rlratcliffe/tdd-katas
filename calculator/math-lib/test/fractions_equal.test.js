@@ -35,4 +35,9 @@ describe('Fractions are equal', function() {
         expect(new Fraction(1,3).equals(new Fraction(1,3))).to.be.true;
         done();
     });
+
+    it("Different denominators", function(done) {
+        expect(new Fraction(1,3).equals(new Fraction(1,4))).to.be.false;
+        done();
+    });
 });

@@ -28,7 +28,7 @@ Fraction.prototype.equals = function(other) {
 	let otherIsFraction = other instanceof Fraction;
 
 	if (otherIsFraction) {
-		return this == other || (other.numerator == this.numerator);
+		return this == other || (other.numerator == this.numerator && this.denominator == other.denominator);
 	} else {
 		return false
 	}
