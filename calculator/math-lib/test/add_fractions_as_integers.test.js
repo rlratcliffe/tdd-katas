@@ -49,9 +49,4 @@ describe('Adding fractions as integers', function() {
         expect(sum.intValue()).to.equal(0);
         done();
     });
-
-    // it('', function(done) {
-
-    //     done();
-    // });
 });
