@@ -26,5 +26,11 @@ export default class Fraction {
 
 Fraction.prototype.equals = function(other) {
 	let otherIsFraction = other instanceof Fraction;
-	return otherIsFraction;
+
+	if (otherIsFraction) {
+		return this == other || (other.numerator == this.numerator);
+	} else {
+		return false
+	}
+
 }

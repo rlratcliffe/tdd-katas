@@ -25,4 +25,14 @@ describe('Fractions are equal', function() {
         done();
     });
 
+    it("Same fraction is equal", function(done) {
+        let fraction = new Fraction(1,3);
+        expect(fraction.equals(fraction)).to.be.true;
+        done();
+    });
+
+    it("Same fraction different object is equal", function(done) {
+        expect(new Fraction(1,3).equals(new Fraction(1,3))).to.be.true;
+        done();
+    });
 });
