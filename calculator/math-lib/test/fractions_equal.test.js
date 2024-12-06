@@ -45,4 +45,14 @@ describe('Fractions are equal', function() {
         expect(new Fraction(2,3).equals(new Fraction(1,3))).to.be.false;
         done();
     });
+
+    it("Whole numbers", function(done) {
+        expect(new Fraction(2).equals(new Fraction(2))).to.be.true;
+        done();
+    });
+
+    it("Whole numbers different are not equal", function(done) {
+        expect(new Fraction(1).equals(new Fraction(2))).to.be.false;
+        done();
+    });
 });
