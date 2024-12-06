@@ -23,3 +23,7 @@ export default class Fraction {
 		return this.denominator;
 	}
 }
+
+Fraction.prototype.equals = function(obj) {
+	return false
+}
