@@ -13,4 +13,10 @@ describe('Adding fractions', function() {
         expect(sum.equals(new Fraction(7,12))).to.be.true;
         done();
     });
+
+    it("Add different denominators, second case", function(done) {
+        let sum = new Fraction(1,2).plus(new Fraction(1,3));
+        expect(sum.equals(new Fraction(5,6))).to.be.true;
+        done();
+    });
 });
