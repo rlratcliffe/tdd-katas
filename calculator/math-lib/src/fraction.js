@@ -10,6 +10,10 @@ export default class Fraction {
 		}
 		return new Fraction(this.numerator + other.numerator, this.denominator);
 	}
+
+	toString() {
+		return this.numerator + "/" + this.denominator;
+	}
 }
 
 Fraction.prototype.equals = function(other) {
