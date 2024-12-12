@@ -5,58 +5,58 @@ import { expect } from 'chai';
 // JS strict equality https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
 // and Java equality https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-
 describe('Fractions are equal', function() {
-    it('Null isn\'t equal', function(done) {
+    it('Fraction not equal to null', function(done) {
         expect(new Fraction(1,5).equals(null)).to.be.false;
         done();
     });
 
-    it("Not a fraction isn't equal", function(done) {
+    it("Fraction not equal to object", function(done) {
         expect(new Fraction(1,2).equals(new Object)).to.be.false;
         done();
     });
 
-    it("NaN", function(done) {
+    it("Fraction not equal to NaN", function(done) {
         expect(new Fraction(1,5).equals(NaN)).to.be.false;
         done();
     });
 
-    it("Undefined not equal", function(done) {
+    it("Fraction not equal to undefined", function(done) {
         expect(new Fraction(1,5).equals(undefined)).to.be.false;
         done();
     });
 
-    it("Same fraction is equal", function(done) {
+    it("Fraction equals same fraction object", function(done) {
         let fraction = new Fraction(1,3);
         expect(fraction.equals(fraction)).to.be.true;
         done();
     });
 
-    it("Same fraction different object is equal", function(done) {
+    it("Fraction equals same value different object", function(done) {
         expect(new Fraction(1,3).equals(new Fraction(1,3))).to.be.true;
         done();
     });
 
-    it("Different denominators but same numerators", function(done) {
+    it("Fractions not equal when denominators are different but numerators are same", function(done) {
         expect(new Fraction(1,3).equals(new Fraction(1,4))).to.be.false;
         done();
     });
 
-    it("Different numerators but same denominators", function(done) {
+    it("Fractions not equal when numerators are different but denominators are same", function(done) {
         expect(new Fraction(2,3).equals(new Fraction(1,3))).to.be.false;
         done();
     });
 
-    it("Whole numbers", function(done) {
+    it("Whole number equals same number", function(done) {
         expect(new Fraction(2).equals(new Fraction(2))).to.be.true;
         done();
     });
 
-    it("Whole numbers different are not equal", function(done) {
+    it("Whole number not equal to different whole number", function(done) {
         expect(new Fraction(1).equals(new Fraction(2))).to.be.false;
         done();
     });
 
-    it("Compare fraction and int", function(done) {
+    it("Fraction not equal to non-Fraction whole number", function(done) {
         expect(new Fraction(1).equals(1)).to.be.false;
         done();
     });
