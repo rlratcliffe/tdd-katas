@@ -46,6 +46,11 @@ describe('Fractions are equal', function() {
         done();
     });
 
+    it("Fractions not equal when numerators and denominators are different", function(done) {
+        expect(new Fraction(1,3).equals(new Fraction(2,4))).to.be.false;
+        done();
+    });
+
     it("Whole number equals same number", function(done) {
         expect(new Fraction(2).equals(new Fraction(2))).to.be.true;
         done();
