@@ -1,7 +1,11 @@
 export default class Fraction {
 	constructor(numerator, denominator) {
 		this.numerator = numerator;
-		this.denominator = denominator;
+		if (denominator != undefined) {
+			this.denominator = denominator;
+		} else {
+			this.denominator = 1;
+		}
 	}
 
 	plus(other) {

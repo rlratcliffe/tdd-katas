@@ -65,4 +65,9 @@ describe('Fractions are equal', function() {
         expect(new Fraction(1).equals(1)).to.be.false;
         done();
     });
+
+    it("Denominator should be 1 when not specified", function(done) {
+        expect(new Fraction(3).equals(new Fraction(3,1))).to.be.true;
+        done();
+    });
 });
