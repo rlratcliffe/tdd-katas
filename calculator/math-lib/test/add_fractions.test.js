@@ -48,8 +48,7 @@ describe('Adding fractions', function() {
         done();
     });
 
-    // Constructor doesn't handle negative denominators
-    xit("Negative signs everywhere", function(done) {
+    it("Negative signs everywhere", function(done) {
         expect(new Fraction(1,-4).plus(new Fraction(-3,-4)).equals(new Fraction(1,2))).to.be.true;
         done();
     });
