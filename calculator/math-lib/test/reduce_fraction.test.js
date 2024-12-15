@@ -7,9 +7,8 @@ describe("ReduceFractionTest", function() {
         done();
     });
 
-    // Wwaiting to implement gcd
-    xit("Reduce to not whole number", function(done) {
-        expect(new Fraction(4,8)).to.be.equal(new Fraction(1,2));
+    it("Reduce to not whole number", function(done) {
+        expect(new Fraction(4,8).equals(new Fraction(1,2))).to.be.true;
         done();
     });
 });

@@ -1,11 +1,13 @@
+import  NumberTheory  from "../src/number_theory.js";
+
 export default class Fraction {
 	constructor(numerator, denominator) {
-		this.numerator = numerator;
-		if (denominator != undefined) {
-			this.denominator = denominator;
-		} else {
-			this.denominator = 1;
+		if (denominator === undefined) {
+			denominator = 1;
 		}
+		let gcd = NumberTheory.gcd(numerator, denominator);
+		this.numerator = numerator / gcd;
+		this.denominator = denominator / gcd;
 	}
 
 	plus(other) {
