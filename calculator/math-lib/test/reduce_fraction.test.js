@@ -16,4 +16,9 @@ describe("ReduceFractionTest", function() {
         expect(new Fraction(6).equals(new Fraction(24,4))).to.be.true;
         done();
     });
+
+    it("Reduce zero", function(done) {
+        expect(new Fraction(0).equals(new Fraction(0,13424))).to.be.true;
+        done();
+    });
 });
