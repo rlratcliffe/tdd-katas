@@ -5,7 +5,8 @@ export default class Fraction {
 		if (denominator === undefined) {
 			denominator = 1;
 		}
-		let gcd = NumberTheory.gcd(numerator, denominator);
+		let signOfDenominator = denominator < 0 ? -1 : 1;
+		let gcd = NumberTheory.gcd(numerator, denominator) * signOfDenominator;
 		this.numerator = numerator / gcd;
 		this.denominator = denominator / gcd;
 	}
