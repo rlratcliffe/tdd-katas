@@ -35,5 +35,12 @@ describe("Greatest common divisor", function() {
         expect(NumberTheory.gcd(24,-28)).to.be.equal(4);
         done();
     })
+
+    it("Zero", function(done) {
+        expect(NumberTheory.gcd(1,0)).to.be.equal(1);
+        expect(NumberTheory.gcd(0,5)).to.be.equal(5);
+        expect(NumberTheory.gcd(0,0)).to.be.equal(0);
+        done();
+    })
 });
 
