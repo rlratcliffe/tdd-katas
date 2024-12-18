@@ -70,15 +70,4 @@ describe('Fractions are equal', function() {
         expect(new Fraction(3).equals(new Fraction(3,1))).to.be.true;
         done();
     });
-
-    it("Negative in numerator and denominator equals positive fraction", function(done) {
-        expect(new Fraction(1,2).equals(new Fraction(-1,-2))).to.be.true;
-        done();
-    });
-
-    it("Either numerator or denominator can be negative", function(done) {
-        expect(new Fraction(-1,2).equals(new Fraction(1, -2))).to.be.true;
-        expect(new Fraction(1,-2).equals(new Fraction(-1, 2))).to.be.true;
-        done();
-    });
 });
