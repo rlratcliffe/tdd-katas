@@ -26,29 +26,28 @@ describe('Adding fractions', function() {
         done();
     });
 
-
-    it("One denominator is a multiple of the other", function(done) {
+    it("Add two fractions where one denominator is a multiple of the other", function(done) {
         expect(new Fraction(3,4).plus(new Fraction(5,8)).equals(new Fraction(11,8))).to.be.true;
         done();
     });
 
-    it("Additional case of positive common denominators", function(done) {
+    it("Additional case of add two fractions with positive common denominators with more complicated common multiple", function(done) {
         expect(new Fraction(1,6).plus(new Fraction(4,9)).equals(new Fraction(11,18))).to.be.true;
         done();
     });
 
-    it("Reduce when denominators are same", function(done) {
+    it("Add two fractions and reduce when denominators are same", function(done) {
         expect(new Fraction(3,4).plus(new Fraction(3,4)).equals(new Fraction(3,2))).to.be.true;
         done();
     });
 
-    it("Negative fraction and reducing", function(done) {
+    it("Add two negative numerator fractions and reduce", function(done) {
         expect(new Fraction(-1,4).plus(new Fraction(3,4)).equals(new Fraction(1,2))).to.be.true;
         expect(new Fraction(3,8).plus(new Fraction(-1,2)).equals(new Fraction(-1,8))).to.be.true;
         done();
     });
 
-    it("Negative signs everywhere", function(done) {
+    it("Add two negative fractions with negative signs in numerator and denominator", function(done) {
         expect(new Fraction(1,-4).plus(new Fraction(-3,-4)).equals(new Fraction(1,2))).to.be.true;
         done();
     });

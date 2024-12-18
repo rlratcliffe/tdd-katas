@@ -1,7 +1,8 @@
 import Fraction from "../src/fraction.js";
 import { expect } from 'chai';
 
-describe("I'm just a template", function() {
+// Just for easier typing to copy the it() syntax
+xdescribe("I'm just a template", function() {
     it("", function(done) {
         done();
     });
