@@ -6,4 +6,9 @@ describe('Handle errors', function() {
         assert.throws(() => new Fraction(0).plus(0), TypeError);
         done();
     });
+
+    it("Fraction can't have a denominator as 0", function(done) {
+        assert.throws(() => new Fraction(1,0), TypeError);
+        done();
+    });
 });

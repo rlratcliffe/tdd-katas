@@ -2,6 +2,9 @@ import  NumberTheory  from "../src/number_theory.js";
 
 export default class Fraction {
 	constructor(numerator, denominator) {
+		if (denominator ==- 0) {
+			throw new TypeError("Fraction can't have 0 as a denominator")
+		}
 		if (denominator === undefined) {
 			denominator = 1;
 		}
