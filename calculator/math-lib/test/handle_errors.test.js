@@ -7,6 +7,11 @@ describe('Handle errors', function() {
         done();
     });
 
+    it('Fraction times non fraction throws type error', function(done) {
+        assert.throws(() => new Fraction(0).multiply(0), TypeError);
+        done();
+    });
+
     it("Fraction can't have a denominator as 0", function(done) {
         assert.throws(() => new Fraction(1,0), TypeError);
         done();

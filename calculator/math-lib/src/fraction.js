@@ -15,12 +15,21 @@ export default class Fraction {
 	}
 
 	plus(other) {
-		if (!(other instanceof Fraction)) {
-			throw new TypeError("Can only add Fractions of type Fraction")
-		}
+		this.#validateOtherFraction(other);
 		let newDenominator = this.denominator * other.denominator;
 		let newNumerator = (this.numerator * other.denominator) + (other.numerator * this.denominator);
 		return new Fraction(newNumerator, newDenominator);
+	}
+
+	multiply(other) {
+		this.#validateOtherFraction(other);
+		return -3;
+	}
+
+	#validateOtherFraction(other) {
+		if (!(other instanceof Fraction)) {
+			throw new TypeError("Can only perform operation with type Fraction")
+		}
 	}
 
 	toString() {
