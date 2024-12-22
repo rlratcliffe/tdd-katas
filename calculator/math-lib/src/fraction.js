@@ -23,7 +23,7 @@ export default class Fraction {
 
 	multiply(other) {
 		this.#validateOtherFraction(other);
-		return -3;
+		return this;
 	}
 
 	#validateOtherFraction(other) {
