@@ -7,4 +7,10 @@ describe('Multiplying fractions as integers', function() {
         expect(sum.equals(new Fraction(0))).to.be.true;
         done();
     });
+
+    it('Non zero multiplicand as integer and zero multiplier as integer outputs zero as integer', function(done) {
+        let sum = new Fraction(1).multiply(new Fraction(0));
+        expect(sum.equals(new Fraction(0))).to.be.true;
+        done();
+    });
 });

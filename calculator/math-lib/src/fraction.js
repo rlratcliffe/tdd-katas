@@ -23,6 +23,9 @@ export default class Fraction {
 
 	multiply(other) {
 		this.#validateOtherFraction(other);
+		if (this.numerator != 0) {
+			return other;
+		}
 		return this;
 	}
 
